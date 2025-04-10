@@ -1,1 +1,8 @@
-<p>food works!</p>
+<form><label>new item name </label>
+<input [(ngModel)]="newItem.name" name="itemName" > What food do you need 
+</form>
+<form><label>new item name </label>
+    <input [(ngModel)]="newItem.quantity" name="itemQuantity"> What food do you need 
+</form>
+<button type="submit" (click)=checkQuantity()>Submit</button>
+<button [routerLink]="['']" >back</button>
