@@ -1,9 +1,9 @@
-<a href="/food" class="link" style="color: brown;">Add Food Item</a>
+<button [routerLink]="['/food']" class="link" style="color: brown;">Add Food Item</button>
 
 
 <!-- Food list section -->
-<div *ngIf="foodToBuy.length; else noFood">
-    <div *ngFor="let food of foodToBuy">
+<div *ngIf="foodToBuy().length; else noFood">
+    <div *ngFor="let food of foodToBuy()">
       we have to buy {{food.quantity}} of {{ food.name }}
     </div>
   </div>
@@ -13,9 +13,9 @@
     <h1>You don't need to buy food</h1>
   </ng-template>
 
-  <a href="/stationary"  class="link" style="color: brown;">Add Stationary Item</a>
-  <div *ngIf="stationaryToBuy.length; else noFood">
-    <div *ngFor="let stationary of stationaryToBuy">
+  <button [routerLink]="['/stationary']"  class="link" style="color: brown;">Add Stationary Item</button>
+  <div *ngIf="stationaryToBuy().length; else noFood">
+    <div *ngFor="let stationary of stationaryToBuy()">
       we have to buy {{stationary.quantity}} of {{ stationary.name }}
     </div>
   </div>
@@ -25,14 +25,14 @@
     <h1 >You don't need to buy food</h1>
   </ng-template>
 
-  <a href="/electronics"  class="link" style="color: brown;">Add Electronics Item</a>
-  <div *ngIf="electronicsToBuy.length; else noFood">
-    <div *ngFor="let electronics of electronicsToBuy">
+  <button [routerLink]="['/electronics']"  class="link" style="color: brown;">Add Electronics Item</button>
+  <div *ngIf="electronicsToBuy().length; else noFood">
+    <div *ngFor="let electronics of electronicsToBuy()">
       we have to buy {{electronics.quantity}} of {{ electronics.name }}
     </div>
   </div>
   
   <!-- Fallback if foodToBuy is empty -->
   <ng-template #noFood>
-    <h1 >You don't need to buy food</h1>
+    <h1 >You don't need to buy this</h1>
   </ng-template>
