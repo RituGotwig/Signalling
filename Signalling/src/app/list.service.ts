@@ -13,18 +13,18 @@ export class ListService {
 
   constructor() { }
 
-  private _foodToBuy = signal<item[]>([
+  public _foodToBuy = signal<item[]>([
     { name: 'popcorn', quantity: 1 },
     { name: 'Rice', quantity: 3 },
     { name: 'Toast', quantity: 2 },
   ]);
 
-  private _stationaryToBuy = signal<item[]>([
+  public _stationaryToBuy = signal<item[]>([
     { name: 'Notebook', quantity: 1 },
     { name: 'Pen', quantity: 5 },
   ]);
 
-  private _electronicsToBuy = signal<item[]>([
+  public _electronicsToBuy = signal<item[]>([
     { name: 'Toaster', quantity: 1 },
     { name: 'Rice Cooker', quantity: 1 },
   ]);
